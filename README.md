@@ -15,10 +15,26 @@ the Routed Dart ecosystem:
 Start with [GUIDE.md](GUIDE.md). The installable skill entrypoint is
 [skills/fullstack-dart/SKILL.md](skills/fullstack-dart/SKILL.md).
 
-## Install locally
+## Install
 
-Copy or symlink `skills/fullstack-dart` into your Codex skills directory, then
-invoke it as `$fullstack-dart` or let Codex select it for matching work.
+Ask Codex to install the tagged skill from GitHub:
+
+```text
+Install the fullstack-dart skill from
+https://github.com/kingwill101/fullstack_dart/tree/v0.1.0/skills/fullstack-dart
+```
+
+For a manual checkout, clone the repository and link the skill into the Codex
+skills directory:
+
+```sh
+git clone --branch v0.1.0 https://github.com/kingwill101/fullstack_dart.git
+mkdir -p ~/.codex/skills
+ln -s "$PWD/fullstack_dart/skills/fullstack-dart" ~/.codex/skills/fullstack-dart
+```
+
+Start a new Codex turn after installation. Invoke the skill explicitly as
+`$fullstack-dart`, or let Codex select it automatically for matching work.
 
 ## Runnable examples
 
