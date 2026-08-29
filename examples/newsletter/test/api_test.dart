@@ -6,6 +6,8 @@ import 'package:property_testing/property_testing.dart';
 import 'package:routed_testing/routed_testing.dart';
 import 'package:server_testing/server_testing.dart';
 import 'package:newsletter/app.dart' as app;
+import 'package:stem/stem.dart';
+import 'package:stem_sqlite/stem_sqlite.dart';
 
 void main() {
   test('subscription validates and queues a welcome email', () async {
@@ -24,6 +26,51 @@ void main() {
     expect(queue.emails, ['reader@example.com']);
 
     await client.close();
+  });
+
+  test('invalid subscriptions do not enqueue work', () async {
+    final queue = _RecordingQueue();
+    final engine = await app.createEngine(queue: queue);
+    final client = TestClient(RoutedRequestHandler(engine));
+
+    final response = await client.post(
+      '/api/subscriptions',
+      jsonEncode({'email': 'not-an-email'}),
+      headers: {
+        HttpHeaders.contentTypeHeader: ['application/json'],
+      },
+    );
+
+    response.assertStatus(HttpStatus.unprocessableEntity);
+    expect(queue.emails, isEmpty);
+    await client.close();
+  });
+
+  test('SQLite queue persists a Stem welcome-email envelope', () async {
+    final directory = await Directory.systemTemp.createTemp(
+      'fullstack-dart-newsletter-',
+    );
+    try {
+      final queue = SqliteNewsletterQueue(storageDirectory: directory.path);
+      await queue.enqueueWelcome('reader@example.com');
+
+      final broker = await SqliteBroker.open(
+        File('${directory.path}/stem-broker.sqlite'),
+      );
+      try {
+        final delivery = await broker
+            .consume(RoutingSubscription.singleQueue(newsletterQueueName))
+            .first
+            .timeout(const Duration(seconds: 5));
+        expect(delivery.envelope.name, welcomeEmail.name);
+        expect(delivery.envelope.args, {'email': 'reader@example.com'});
+        await broker.ack(delivery);
+      } finally {
+        await broker.close();
+      }
+    } finally {
+      await directory.delete(recursive: true);
+    }
   });
 
   test('Liquify renders the email layout', () {
