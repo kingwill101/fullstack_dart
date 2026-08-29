@@ -10,7 +10,8 @@ import 'package:taskboard_react_layer/.generated/server_actions.g.dart';
 import 'package:taskboard/app.dart' as taskboard_app;
 import 'package:taskboard/src/database/datasource.dart';
 
-const _defaultRootComponent = 'package:taskboard_react_layer/lib/app.dart#App';
+const _defaultRootComponent =
+    'package:taskboard_react_layer/lib/react/app.dart#App';
 
 Future<void> main() async {
   await Directory('database').create(recursive: true);

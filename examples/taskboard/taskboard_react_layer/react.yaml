@@ -1,7 +1,7 @@
 client:
   entrypoint: web/client.dart
 ssr:
-  entrypoint: lib/ssr.dart
+  entrypoint: lib/react/ssr.dart
 server:
   entrypoint: bin/server.dart
 styles:

@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  examples:
+    name: Examples (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: kuhnroyal/flutter-fvm-config-action/setup@v3
+      - name: Install FVM
+        run: dart pub global activate fvm
+      - name: Analyze and test Taskboard API
+        working-directory: examples/taskboard
+        run: |
+          fvm dart pub get
+          fvm dart analyze
+          fvm dart test
+      - name: Analyze, test, and build React SSR
+        working-directory: examples/taskboard/taskboard_react_layer
+        run: |
+          fvm dart pub get
+          fvm dart analyze
+          fvm dart test
+          fvm dart run react_tool:react build
+      - name: Analyze and test Newsletter
+        working-directory: examples/newsletter
+        run: |
+          fvm dart pub get
+          fvm dart analyze
+          fvm dart test
+      - name: Analyze and test Pulumi
+        working-directory: examples/deployment
+        run: |
+          fvm dart pub get
+          fvm dart analyze
+          fvm dart test
+
+  skill:
+    name: Skill metadata
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+      - run: pip install pyyaml
+      - name: Validate skill frontmatter
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          skill = Path('skills/fullstack-dart/SKILL.md').read_text()
+          assert skill.startswith('---\n')
+          _, frontmatter, body = skill.split('---', 2)
+          metadata = yaml.safe_load(frontmatter)
+          assert metadata['name'] == 'fullstack-dart'
+          assert isinstance(metadata['description'], str)
+          assert body.strip()
+          PY

@@ -6,30 +6,30 @@ server functions.
 ## Setup
 
 ```sh
-dart pub get
+fvm dart pub get
 ```
 
 ## Build
 
 ```sh
-dart run react_tool:react build
+fvm dart run react_tool:react build
 ```
 
 ## Run
 
 ```sh
-dart run react_tool:react serve
+fvm dart run react_tool:react serve
 ```
 
 The server runs on `http://localhost:8080` and the SSR worker on port
-`3001`. Server functions live in `lib/greeting.dart` and are called from
-`lib/app.dart` through the generated client
-(`lib/.generated/greeting.client.g.dart`).
+`3001`. Server functions live in `lib/react/greeting.dart` and are called from
+`lib/react/app.dart` through the generated client
+(`lib/.generated/react/greeting.client.g.dart`).
 
 For day-to-day iteration, the scaffold focuses on:
 
-- `lib/app.dart`
-- `lib/greeting.dart`
+- `lib/react/app.dart`
+- `lib/react/greeting.dart`
 
 Generated output is in `lib/.generated/` and `build/react`.
 
@@ -40,11 +40,9 @@ default.
 ## Test
 
 ```sh
-# Fast unit tests (no build)
-dart test
-
-# Full-stack SSR + server-function integration (builds + boots Node worker)
-dart test -t integration
+# Generate contracts, then run fast harness tests.
+fvm dart run react_tool:react build
+fvm dart test
 ```
 
 Tests use `react_testing`:
@@ -55,12 +53,20 @@ Tests use `react_testing`:
 - Transported full-stack checks can use `RoutedRequestHandler` from
   `routed_testing`.
 
+The generated tests are fast harness tests. They do not build or boot the Node
+SSR worker; add a separate integration test when validating the deployed
+application stack.
+
 ## Analyze
 
 ```sh
-dart run react_tool:react analyze
+fvm dart run react_tool:react analyze
 # verbose
-dart run react_tool:react analyze --verbose
+fvm dart run react_tool:react analyze --verbose
 ```
 
-Uses `react_analysis` for component, hook and SSR diagnostics (same engine as the IDE plugin). Run `dart run react_tool:react doctor` to check setup.
+Uses `react_analysis` for component, hook and SSR diagnostics (same engine as
+the IDE plugin). Run `fvm dart run react_tool:react doctor` to check setup.
+
+This layer imports the parent Taskboard composition root, so React SSR, server
+actions, and the Ormed-backed `/api/tasks` routes share one HTTP process.

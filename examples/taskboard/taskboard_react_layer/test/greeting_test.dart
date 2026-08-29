@@ -1,8 +1,8 @@
 import 'package:react_testing/react_testing.dart';
 import 'package:test/test.dart';
 
-import 'package:taskboard_react_layer/greeting.dart';
-import 'package:taskboard_react_layer/.generated/greeting.action.g.dart';
+import 'package:taskboard_react_layer/.generated/react/greeting.action.g.dart';
+import 'package:taskboard_react_layer/react/greeting.dart';
 
 void main() {
   test('server function dispatches through the React harness', () async {

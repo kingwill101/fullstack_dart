@@ -25,11 +25,11 @@ ReactNode App(({String title}) props) {
       h1(key: 'title', children: [props.title]),
       div(
         key: 'welcome',
-        children: ['Hello! — edit lib/app.dart to get started.'],
+        children: ['Hello! — edit lib/react/app.dart to get started.'],
       ),
       div(
         key: 'instructions',
-        children: ['Edit lib/app.dart and rebuild to see changes.'],
+        children: ['Edit lib/react/app.dart and rebuild to see changes.'],
       ),
     ],
   );

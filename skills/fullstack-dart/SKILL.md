@@ -80,9 +80,10 @@ output, or other generated artifacts. Change authored inputs or generators,
 regenerate, then analyze and test.
 
 The React Dart and Routed packages used by this skill are published. Use their
-compatible pub.dev releases in applications and examples. `react_tool 0.2.2`
-still emits development path/Git references in its `routed` templates, so
-normalize the generated `pubspec.yaml` to hosted releases before `pub get`.
+compatible pub.dev releases in applications and examples. `react_tool 0.2.3`
+uses hosted React packages but still emits Git references for Routed packages
+in its Routed templates, so normalize those declarations to hosted releases
+before `pub get`.
 Do not replace CLI-generated source structure while correcting dependencies.
 
 ## Finish

@@ -2,7 +2,7 @@ import 'package:react_core/react.dart';
 import 'package:react_testing/react_testing.dart';
 import 'package:test/test.dart';
 
-import 'package:taskboard_react_layer/app.dart';
+import 'package:taskboard_react_layer/react/app.dart';
 
 void main() {
   test('component harness renders the root host node', () {

@@ -21,8 +21,9 @@ Package boundaries:
 - `react_testing`: native harnesses, composed with `routed_testing`.
 
 Consume compatible React and Routed releases from pub.dev. The `react_tool
-0.2.2` Routed templates still emit workspace path and Git dependencies; replace
-only those dependency declarations with hosted constraints after scaffolding.
+0.2.3` Routed templates use hosted React releases but still emit Git dependencies
+for Routed; replace only those Routed declarations with hosted constraints
+after scaffolding.
 The same template keeps a pre-codegen `greetRef` that collides with its generated
 ref, so remove the manual codec/ref once generation succeeds and import the
 canonical `.generated/greeting.action.g.dart` contract in tests.

@@ -1,8 +1,8 @@
 import 'package:react_server/react_server.dart';
 
-import '.generated/app.react.dart';
-import '.generated/react_components.g.dart';
-import '.generated/ssr_registry.g.dart';
+import 'package:taskboard_react_layer/.generated/react/app.react.dart';
+import 'package:taskboard_react_layer/.generated/react_components.g.dart';
+import 'package:taskboard_react_layer/.generated/ssr_registry.g.dart';
 
 void main() {
   registerReactComponents();
