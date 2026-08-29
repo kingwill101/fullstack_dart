@@ -69,7 +69,7 @@ void main() {
         await broker.close();
       }
     } finally {
-      await directory.delete(recursive: true);
+      await _deleteTemporaryDirectory(directory);
     }
   });
 
@@ -107,4 +107,16 @@ class _RecordingQueue implements NewsletterQueue {
 
   @override
   Future<void> enqueueWelcome(String email) async => emails.add(email);
+}
+
+Future<void> _deleteTemporaryDirectory(Directory directory) async {
+  for (var attempt = 0; attempt < 10; attempt++) {
+    try {
+      await directory.delete(recursive: true);
+      return;
+    } on FileSystemException {
+      if (attempt == 9) rethrow;
+      await Future<void>.delayed(const Duration(milliseconds: 100));
+    }
+  }
 }
