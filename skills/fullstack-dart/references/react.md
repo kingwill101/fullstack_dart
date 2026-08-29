@@ -20,13 +20,11 @@ Package boundaries:
 - `react_server_routed`: Routed transport integration.
 - `react_testing`: native harnesses, composed with `routed_testing`.
 
-Consume compatible React and Routed releases from pub.dev. The `react_tool
-0.2.3` Routed templates use hosted React releases but still emit Git dependencies
-for Routed; replace only those Routed declarations with hosted constraints
-after scaffolding.
-The same template keeps a pre-codegen `greetRef` that collides with its generated
-ref, so remove the manual codec/ref once generation succeeds and import the
-canonical `.generated/greeting.action.g.dart` contract in tests.
+Consume compatible React and Routed releases from pub.dev. As of `react_tool
+0.2.4`, Routed templates emit hosted dependencies and import generated files
+from `lib/.generated/react/`. Server-function tests use the generated
+`.generated/react/greeting.action.g.dart` contract rather than a handwritten
+duplicate ref.
 
 Never hand-edit `lib/.generated/` or `build/react/`. Change authored inputs or
 generators, then run:

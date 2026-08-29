@@ -22,20 +22,11 @@ jobs:
       - uses: kuhnroyal/flutter-fvm-config-action/setup@v3
       - name: Install FVM
         run: dart pub global activate fvm
-      - name: Build React browser and SSR bundles
-        if: runner.os != 'Windows'
+      - name: Build, analyze, and test React
         working-directory: examples/taskboard/taskboard_react_layer
         run: |
           fvm dart pub get
           fvm dart run react_tool:react build
-          fvm dart analyze
-          fvm dart test
-      - name: Generate, analyze, and test React on Windows
-        if: runner.os == 'Windows'
-        working-directory: examples/taskboard/taskboard_react_layer
-        run: |
-          fvm dart pub get
-          fvm dart run react_tool:react generate
           fvm dart analyze
           fvm dart test
       - name: Analyze and test Taskboard API
