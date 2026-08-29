@@ -35,7 +35,7 @@ jobs:
         working-directory: examples/taskboard/taskboard_react_layer
         run: |
           fvm dart pub get
-          fvm dart run build_runner build
+          fvm dart run react_tool:react generate
           fvm dart analyze
           fvm dart test
       - name: Analyze and test Taskboard API
