@@ -1,0 +1,8 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  plugins:
+    - ormed
+  errors:
+    # Ormed currently exposes its analyzer through the legacy plugin key.
+    analysis_options_deprecated_plugins: ignore

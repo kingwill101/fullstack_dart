@@ -1,0 +1,19 @@
+.dart_tool/
+.dart_tool/routed/
+.packages
+
+# Build and temporary outputs
+build/
+storage/app/*.sqlite
+storage/app/*.sqlite-*
+storage/app/*.lock
+
+# Environment secrets
+.env
+.env.*
+
+# Generated sources
+lib/generated/
+
+# FVM Version Cache
+.fvm/

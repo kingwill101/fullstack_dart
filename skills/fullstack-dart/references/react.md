@@ -20,10 +20,12 @@ Package boundaries:
 - `react_server_routed`: Routed transport integration.
 - `react_testing`: native harnesses, composed with `routed_testing`.
 
-Consume all React packages from
-`https://github.com/kingwill101/react_workspace.git` at one explicit ref. Use
-one matching Routed ref for Routed dependencies. Prefer commit SHAs outside
-workspace-edge development.
+Consume compatible React and Routed releases from pub.dev. The `react_tool
+0.2.2` Routed templates still emit workspace path and Git dependencies; replace
+only those dependency declarations with hosted constraints after scaffolding.
+The same template keeps a pre-codegen `greetRef` that collides with its generated
+ref, so remove the manual codec/ref once generation succeeds and import the
+canonical `.generated/greeting.action.g.dart` contract in tests.
 
 Never hand-edit `lib/.generated/` or `build/react/`. Change authored inputs or
 generators, then run:

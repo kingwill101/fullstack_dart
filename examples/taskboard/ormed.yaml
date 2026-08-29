@@ -1,0 +1,39 @@
+# Ormed Configuration
+#
+# Environment Variables:
+#   Use ${VAR} to substitute environment variables
+#   Use ${VAR:-default} to provide a fallback value
+#   Create a .env file in this directory for local development
+#
+# Example:
+#   database: ${DB_PATH:-database/default.sqlite}
+#   password: ${DB_PASSWORD}
+
+driver:
+  type: ${DB_TYPE:-sqlite}
+  options:
+    # SQLite configuration (default)
+    database: ${DB_PATH:-database/taskboard.sqlite}
+
+    # PostgreSQL/MySQL configuration (uncomment and configure as needed)
+    # host: ${DB_HOST:-localhost}
+    # port: ${DB_PORT:-5432}
+    # database: ${DB_NAME:-taskboard}
+    # username: ${DB_USER:-postgres}
+    # password: ${DB_PASSWORD}
+    # sslmode: ${DB_SSLMODE:-disable}
+
+    # Cloudflare D1 configuration (DB_TYPE=d1)
+    # accountId: ${DB_D1_ACCOUNT_ID}
+    # databaseId: ${DB_D1_DATABASE_ID}
+    # apiToken: ${DB_D1_API_TOKEN}
+    # baseUrl: ${DB_D1_BASE_URL:-https://api.cloudflare.com/client/v4}
+
+migrations:
+  directory: lib/src/database/migrations
+  registry: lib/src/database/migrations.dart
+  ledger_table: ${MIGRATION_TABLE:-orm_migrations}
+  schema_dump: database/schema.sql
+seeds:
+  directory: lib/src/database/seeders
+  registry: lib/src/database/seeders.dart

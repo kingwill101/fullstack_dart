@@ -1,0 +1,4 @@
+name: fullstack-dart-local
+runtime: dart
+description: Local Docker deployment for the full-stack Dart examples.
+main: bin/deployment.dart

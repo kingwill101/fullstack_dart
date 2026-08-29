@@ -14,11 +14,14 @@ adapters. Prefer explicit composition roots over global service lookup.
 Before changing an application:
 
 1. Read its `AGENTS.md`, `pubspec.yaml`, existing entrypoints, and tests.
-2. Determine which packages and versions/refs it actually uses. Do not replace
-   path or Git dependencies with pub.dev constraints without authorization.
+2. Determine which package versions it actually uses. Prefer compatible
+   pub.dev releases; reserve path dependencies for local package development
+   and Git dependencies for an explicitly requested unreleased fix.
 3. Identify its processes: web host, SSR worker, Stem worker/scheduler, and CLI.
 4. Identify its deployment stacks and rendered-template roots when present.
 5. Preserve generated-file rules from each source repository.
+6. When `.fvmrc` exists, run Dart and package CLIs through `fvm dart`; use
+   `fvm exec` for tools such as Pulumi that must discover `dart` on `PATH`.
 
 For a new application, read [architecture.md](references/architecture.md) and
 [project-layout.md](references/project-layout.md).
@@ -76,9 +79,11 @@ Do not hand-edit `*.orm.dart`, `lib/.generated/`, `build/react/`, Stem builder
 output, or other generated artifacts. Change authored inputs or generators,
 regenerate, then analyze and test.
 
-React Dart packages currently require Git dependencies with one explicit,
-consistent ref. Routed packages used with them must likewise share one Routed
-ref. Prefer immutable commit SHAs outside workspace-edge development.
+The React Dart and Routed packages used by this skill are published. Use their
+compatible pub.dev releases in applications and examples. `react_tool 0.2.2`
+still emits development path/Git references in its `routed` templates, so
+normalize the generated `pubspec.yaml` to hosted releases before `pub get`.
+Do not replace CLI-generated source structure while correcting dependencies.
 
 ## Finish
 

@@ -1,0 +1,18 @@
+.dart_tool/
+.dart_tool/routed/
+.packages
+
+# Build and temporary outputs
+build/
+database/*.sqlite
+taskboard_react_layer/database/*.sqlite
+
+# Environment secrets
+.env
+.env.*
+
+# Generated sources
+lib/generated/
+
+# FVM Version Cache
+.fvm/

@@ -63,14 +63,12 @@ acceptable and repairable. It is not atomic with the database write.
 - Use `server_testing` as the transport-neutral harness, `routed_testing` as the
   Routed adapter, and `property_testing` for generators, shrinking, chaos, and
   stateful invariants.
-- Pin all React packages to one Git ref and all Routed packages to one matching
-  ref until they are published compatibly; prefer immutable SHAs in deployments.
+- Use compatible hosted React and Routed releases. Reserve a shared immutable
+  Git commit for deliberate framework-edge testing only; examples and
+  deployments should not use development path or branch dependencies.
 
 ## Source status
 
-This guide was derived on 2026-08-28 from the local Artisanal and Routed
-repositories and the current `master` branches of `kingwill101/stem`,
-`kingwill101/react_workspace`, `RoutedDart/ormed`, `kingwill101/liquify`,
-`kingwill101/pulumi-dart`, `RoutedDart/server_testing`, and
-`kingwill101/property_testing`. The reusable agent
+This guide was validated on 2026-08-29 against the hosted package releases and
+the local Artisanal and Routed repositories. The reusable agent
 instructions live in [`skills/fullstack-dart/SKILL.md`](skills/fullstack-dart/SKILL.md).

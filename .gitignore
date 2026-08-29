@@ -2,3 +2,6 @@
 .dart_tool/
 build/
 coverage/
+
+# FVM Version Cache
+.fvm/
