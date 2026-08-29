@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        DART_VERSION: "3.9"
+        DART_VERSION: "3.13"
         APP_NAME: "server"
     container_name: taskboard
     restart: unless-stopped

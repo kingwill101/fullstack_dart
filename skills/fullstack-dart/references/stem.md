@@ -1,5 +1,9 @@
 # Stem jobs and workflows
 
+Use the coordinated hosted release train: `stem` and `stem_builder` 0.3.x,
+with the queue adapters, Flutter integrations, CLI, and adapter test kit on
+0.2.x. These releases require Dart 3.12 or newer.
+
 Prefer generated typed definitions from `stem_builder`:
 
 ```dart

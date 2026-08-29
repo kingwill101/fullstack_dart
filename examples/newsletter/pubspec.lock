@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: "3b19a47f6ea7c2632760777c78174f47f6aec1e05f0cd611380d4593b8af1dbc"
+      sha256: "9a3386eea899815698dd55995277cf7cb8572ee52b399a6edfb7ae2b50e5fc19"
       url: "https://pub.dev"
     source: hosted
-    version: "96.0.0"
+    version: "105.0.0"
   acanthis:
     dependency: transitive
     description:
@@ -21,26 +21,26 @@ packages:
     dependency: transitive
     description:
       name: analysis_server_plugin
-      sha256: c9611c4b053f868434400e734c594a7e8464f307f8eaf7ff266d903cd2d615c0
+      sha256: "0ba6a701c8d926f548a736ac3da8536f63f75fd49ad803f9dfcd091b869ef753"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.10"
+    version: "0.3.20"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "0c516bc4ad36a1a75759e54d5047cb9d15cded4459df01aa35a0b5ec7db2c2a0"
+      sha256: "62993bed6eadbe9596c5c20d5c167e7bc563c5fe266657a04ddeb93bdb84f4c9"
       url: "https://pub.dev"
     source: hosted
-    version: "10.2.0"
+    version: "14.1.0"
   analyzer_plugin:
     dependency: transitive
     description:
       name: analyzer_plugin
-      sha256: a886aaa94fb128ffe9cf5ee2495d9ef42ef129fe2e265b84b8820987ca15f4cd
+      sha256: "8c988c96836e59db019930c603dd1493797a7aaf97ba71469ea13724602be4dd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.14.4"
+    version: "0.14.14"
   ansicolor:
     dependency: transitive
     description:
@@ -125,10 +125,10 @@ packages:
     dependency: transitive
     description:
       name: build
-      sha256: "45d14a0fb23e018d8287c32fc98d726ce466b231928ed9b9200f29bd3ccd39ae"
+      sha256: b94f5da9ed3d081fd4ecc426c260998b5f4f4eb2f6d89b7e5472edef0b2b2a1b
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.7"
+    version: "4.0.10"
   built_collection:
     dependency: transitive
     description:
@@ -333,26 +333,26 @@ packages:
     dependency: transitive
     description:
       name: dart_style
-      sha256: "29f7ecc274a86d32920b1d9cfc7502fa87220da41ec60b55f329559d5732e2b2"
+      sha256: "82ade9fc4273f29ed673e33166944465225b4f7fc5d4aaef48605cc751c18fc1"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.7"
+    version: "3.1.13"
   dartastic_opentelemetry:
     dependency: transitive
     description:
       name: dartastic_opentelemetry
-      sha256: "00f82a258a772cb2a9680f92d2de28030caaa7a1629114d236b7d5059cc22387"
+      sha256: "931df9706f0bf1e30f772195d54e27cb9f8fb21939f105daaf438af2313807bd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.3"
+    version: "0.10.0"
   dartastic_opentelemetry_api:
     dependency: transitive
     description:
       name: dartastic_opentelemetry_api
-      sha256: "3031f587ed1aca4cc208a1337a86e0ec97a4aa7ede3dcf5fc7ed3c759ab074f6"
+      sha256: "61e84a4a1709488741b02de2afc616bf19c6f127afbb00f66132cf4c17e100af"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.8"
+    version: "0.10.0"
   decimal:
     dependency: transitive
     description:
@@ -493,10 +493,10 @@ packages:
     dependency: transitive
     description:
       name: grpc
-      sha256: "15227eeed339bd0ef5afe515cb791b2e4bec0711ab56f37cc44257bcfaedc4bf"
+      sha256: "86be3a7d39ad865b214a7370021ac80e68939238b507730de6d97fc662cb2723"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.0"
+    version: "5.1.0"
   hashlib:
     dependency: transitive
     description:
@@ -709,10 +709,10 @@ packages:
     dependency: transitive
     description:
       name: mockito
-      sha256: eff30d002f0c8bf073b6f929df4483b543133fcafce056870163587b03f1d422
+      sha256: "6c1970612452260366064d4df80fdb3eece1ec5e52610ae34a0e51f2f3d8e64f"
       url: "https://pub.dev"
     source: hosted
-    version: "5.6.4"
+    version: "5.8.1"
   mustache_template:
     dependency: transitive
     description:
@@ -757,42 +757,42 @@ packages:
     dependency: transitive
     description:
       name: ormed
-      sha256: "1601911d8a3e4161944e5aa6f94e0b885007d2bf0a448f8d444a02e93dd7cec2"
+      sha256: b92d77f2dfc21da570160643f8bdefb9d793bcd3bf3e736bc7423da0644e89db
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.0"
   ormed_postgres:
     dependency: transitive
     description:
       name: ormed_postgres
-      sha256: fba913c52bacc97875786901aa7bad6e6d1f7f9d8f1ca1e29a5bcaaea5c6a56f
+      sha256: "815ca23341e298e1c3ce640604c140ad1663595de892dc15360f47202e5969c7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.0"
   ormed_sqlite:
     dependency: transitive
     description:
       name: ormed_sqlite
-      sha256: ae60013ac154382bacdccf63e2cf262dd8ccc0f2f445fe87e3ed04cdf937bfa1
+      sha256: "147a16273ea030fec490bd0bc78ddda01208d69ebb7ce02a34d5bc53265f47fd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.0"
   ormed_sqlite_core:
     dependency: transitive
     description:
       name: ormed_sqlite_core
-      sha256: d08e7aeaaa4b9deb8626d7a617597223b6b08d7d2d8282186807c18dae2b43c3
+      sha256: "0a019f23b7f2dfe0a68237511176b7801958b22739bfaee8bc94eecd78f4dbd0"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.2.0"
   ormed_sqlite_web:
     dependency: transitive
     description:
       name: ormed_sqlite_web
-      sha256: e0fd7c8dae080c92d00d8a8e6088e530418152743ba80537d094767e89faa61a
+      sha256: "53db1d4b328837a76c59ea84cb54da9fc3e1e52dd5feebceee2914cbf2feea7a"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.2.0"
   package_config:
     dependency: transitive
     description:
@@ -893,10 +893,10 @@ packages:
     dependency: transitive
     description:
       name: protobuf
-      sha256: de9c9eb2c33f8e933a42932fe1dc504800ca45ebc3d673e6ed7f39754ee4053e
+      sha256: "75ec242d22e950bdcc79ee38dd520ce4ee0bc491d7fadc4ea47694604d22bf06"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.0"
+    version: "6.0.0"
   pub_semver:
     dependency: transitive
     description:
@@ -965,10 +965,10 @@ packages:
     dependency: transitive
     description:
       name: routed_analyzer
-      sha256: "7b2328dbf250f71eab21c70c3bd50abb7551237b2cd254cce69490741d31dba0"
+      sha256: "5c66a7857b9b8c1a11e2b191a43749fbe6c82dfcd6bf7909de56a4d4c97a10fc"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.1"
+    version: "0.1.2"
   routed_auth:
     dependency: transitive
     description:
@@ -1021,18 +1021,18 @@ packages:
     dependency: transitive
     description:
       name: routed_observability
-      sha256: "1df385451758efd8ca4cfda8d63da7a6d73c470afc557a0998670fd76bf2979d"
+      sha256: "4e0f6107f57a2e50142a002965e4ce7feb410b5e1f3c25384f2d88e9db2e9643"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.1"
   routed_openapi:
     dependency: transitive
     description:
       name: routed_openapi
-      sha256: bc418cab810499ac341054b347523d2ac565326975a873462bb8c37ee0682e59
+      sha256: ed8f2ca230b90905fe95e7d9af0f539fac6709bbb3b21571a48ca57327a6261f
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.1"
   routed_rate_limit:
     dependency: transitive
     description:
@@ -1229,10 +1229,10 @@ packages:
     dependency: transitive
     description:
       name: sqlite3_web
-      sha256: d876398a9f2cbf115d93fc34901f8fa129b58b13b5fa9377156ed3a9a05695e3
+      sha256: aa6af15ef8bf8551d3a84203e3cbc022990567372e46ef98f91bdb2018fcfb0e
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.9.4"
   stack_trace:
     dependency: transitive
     description:
@@ -1245,50 +1245,42 @@ packages:
     dependency: "direct main"
     description:
       name: stem
-      sha256: a41017b0ac0702c9aa52af83d24e2a59b558dd9a1ab2c0565cf24a12bda3f989
+      sha256: "6509a968e4762e3bf57943a47eb6c4af7fcff5acba5695927bc98cf27a0b5913"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.3.0"
   stem_cli:
     dependency: "direct dev"
     description:
       name: stem_cli
-      sha256: "4931afbd9a71a5095c36220592a8bdc4b15e1d16be3a81adf197d0d40c2cd9c9"
+      sha256: e9ba7118e16f5350bd468a0c929ad0672e833926ca0998beb1064ded6d61efa4
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.1"
-  stem_memory:
-    dependency: transitive
-    description:
-      name: stem_memory
-      sha256: bd2ca27a1420c8eb590a3e4c25033e85004c0f25395790239e029916738ed986
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.1"
+    version: "0.2.0"
   stem_postgres:
     dependency: transitive
     description:
       name: stem_postgres
-      sha256: a4be1ed6b7efe8d9034f753c1445b655a567453e091de49745dcca463f802f2b
+      sha256: a8d6814f0b7369bc5f4fc453a88acc35d5020d379d3271fed41386809d3287df
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.2"
+    version: "0.2.0"
   stem_redis:
     dependency: transitive
     description:
       name: stem_redis
-      sha256: a944468d2124dc17086aacf5fc13942ec8770926902a0c60b47d690e9ca1d1ae
+      sha256: "2c9ea4177e244c05c0fc608c90261e6c188c3153d9033711317bad193459d2e3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.2"
+    version: "0.2.0"
   stem_sqlite:
     dependency: "direct main"
     description:
       name: stem_sqlite
-      sha256: b4c8865e13a15334db99cf9cc82678b0257ed5c91464d4e693db360cf1ad575f
+      sha256: fcab7d45a681e3cec9a2f79f141667524c7f3a73a5aafe0f9edcb95675b4d27e
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.3"
+    version: "0.2.0"
   storage_fs:
     dependency: transitive
     description:
@@ -1349,26 +1341,26 @@ packages:
     dependency: "direct dev"
     description:
       name: test
-      sha256: ca578dc12bb8b2f40b67b7d3bd2fac4f31c01a6ff7130a14e2597b919934507f
+      sha256: "0d5ba5602ec3baa28c8ce365e1efc5575969c765f45c554a3e167dc7945b9c30"
       url: "https://pub.dev"
     source: hosted
-    version: "1.31.1"
+    version: "1.31.2"
   test_api:
     dependency: transitive
     description:
       name: test_api
-      sha256: "2a122cbe059f8b610d3a5415f42e255b6c17b1f21eee1d960f31080237fb4f11"
+      sha256: "475610b2aa23c19687cce2961e44b0cc57cafe220f67c2b80201231b2a07fbe7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.12"
+    version: "0.7.13"
   test_core:
     dependency: transitive
     description:
       name: test_core
-      sha256: d2e98ec12998368dc59ddd47ab709f2cd55acd6b66dc7db764455a44082f4bc5
+      sha256: a39c204a4fc7a7ccb04a2b985e359fda3cc37e45e0b8ac61c3fb1a05aa832132
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.18"
+    version: "0.6.19"
   time_machine2:
     dependency: transitive
     description:
