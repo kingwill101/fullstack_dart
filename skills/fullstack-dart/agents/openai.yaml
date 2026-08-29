@@ -1,0 +1,4 @@
+interface:
+  display_name: "Full-stack Dart"
+  short_description: "Build apps across the full Dart stack"
+  default_prompt: "Use $fullstack-dart to build or maintain this application with the verified package boundaries and workflows."
