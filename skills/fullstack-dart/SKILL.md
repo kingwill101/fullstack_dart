@@ -80,7 +80,7 @@ output, or other generated artifacts. Change authored inputs or generators,
 regenerate, then analyze and test.
 
 The React Dart and Routed packages used by this skill are published. Use their
-compatible pub.dev releases in applications and examples. `react_tool 0.2.4`
+compatible pub.dev releases in applications and examples. `react_tool 0.2.5`
 generates Routed projects with hosted dependencies, authored files under
 `lib/react/`, and generated contracts under `lib/.generated/react/`.
 Preserve the CLI-generated source structure when integrating application code.

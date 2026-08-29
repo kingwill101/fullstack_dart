@@ -21,7 +21,7 @@ Package boundaries:
 - `react_testing`: native harnesses, composed with `routed_testing`.
 
 Consume compatible React and Routed releases from pub.dev. As of `react_tool
-0.2.4`, Routed templates emit hosted dependencies and import generated files
+0.2.5`, Routed templates emit hosted dependencies and import generated files
 from `lib/.generated/react/`. Server-function tests use the generated
 `.generated/react/greeting.action.g.dart` contract rather than a handwritten
 duplicate ref.

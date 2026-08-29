@@ -1101,10 +1101,10 @@ packages:
     dependency: "direct dev"
     description:
       name: react_tool
-      sha256: "7d3954acc9b9e52c5be51221fc5c9ca2428dee6c654ccf0f7a13cd82f2105d90"
+      sha256: b91b3b140e067501290e371344979947b62bc12d10fb5252333330d99539d645
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.4"
+    version: "0.2.5"
   react_web:
     dependency: "direct main"
     description:
