@@ -1,4 +1,4 @@
-name: taskboard
+name: manual_ormed
 description: A new Routed application.
 version: 0.1.0
 publish_to: 'none'
@@ -11,28 +11,14 @@ dependencies:
   artisanal: ^0.5.0
   ormed: ^0.3.1
   ormed_sqlite: ^0.4.1
-  react_actions: ^0.1.1
-  react_core: ^0.1.0
-  react_dom: ^0.1.0
-  react_js: ^0.1.0
-  react_server: ^0.1.1
-  react_server_routed: ^0.1.0
-  react_web: ^0.1.1
-  routed: ^0.5.0
+  routed: ^0.5.1
   routed_core: ">=0.5.0 <1.0.0"
-  routed_views: ">=0.2.0 <1.0.0"
 
 dev_dependencies:
-  build_runner: ^2.16.0
   lints: ^6.0.0
-  ormed_cli: ^0.3.1
-  property_testing: ^0.3.2+1
-  react_codegen: ^0.1.0
-  react_testing: ^0.1.0
-  react_tool: ^0.2.5
-  routed_cli: ^0.4.0
   routed_testing: ">=0.4.0 <1.0.0"
   server_testing: ^0.4.0
   test: ^1.26.3
+
 dependency_overrides:
   artisanal: ^0.5.0

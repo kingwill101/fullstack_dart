@@ -41,6 +41,8 @@ Start a new Codex turn after installation. Invoke the skill explicitly as
 - `examples/taskboard`: Routed + Ormed API with a React Dart SSR layer.
 - `examples/newsletter`: Routed + Liquify subscription UI and a separate Stem
   worker backed by SQLite.
+- `examples/manual_ormed`: Routed + Ormed SQLite using `OrmDatabase` and manual
+  table queries without models or code generation.
 - `examples/deployment`: Pulumi Dart Docker image stack for both applications.
 
 Every example uses FVM and hosted framework packages. See each example's
